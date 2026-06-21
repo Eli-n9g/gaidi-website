@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAIDI Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body onload="protectAdmin()">
+
+<div class="admin-layout">
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-logo">
+            <img src="images/logo.png" alt="GAIDI Logo">
+            <h2>GAIDI Admin</h2>
+            <p>Management Portal</p>
+        </div>
+
+        <a href="admin.html">Dashboard</a>
+        <a href="admin-news.html">News</a>
+        <a href="admin-gallery.html">Gallery</a>
+        <a href="admin-resources.html">Resources</a>
+        <a href="admin-members.html">Members</a>
+        <a href="admin-volunteers.html">Volunteers</a>
+        <a href="admin-settings.html">Settings</a>
+        <a href="index.html">View Website</a>
+
+        <div class="admin-profile">
+            <strong>Administrator</strong>
+            <p>GAIDI Secretariat</p>
+            <p>Status: Active</p>
+        </div>
+
+    </aside>
+
+    <main class="admin-main">
+
+        <div class="admin-topbar">
+            <h1>Dashboard Overview</h1>
+            <button class="logout-btn" onclick="logoutAdmin()">Logout</button>
+        </div>
+
+        <section class="admin-section">
+
+            <h2>Welcome, Administrator</h2>
+            <p>
+                This dashboard supports GAIDI website administration, resource tracking,
+                volunteer coordination, membership management and communication planning.
+            </p>
+
+        </section>
+
+        <section class="admin-section">
+
+            <div class="dashboard-stats">
+
+                <div class="stat-card">
+                    <h3>4</h3>
+                    <p>Program Pillars</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>8+</h3>
+                    <p>Beneficiary Groups</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>4+</h3>
+                    <p>Downloads</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>14+</h3>
+                    <p>Website Pages</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="admin-section">
+
+            <h2>Quick Management Actions</h2>
+
+            <div class="admin-grid">
+
+                <div class="admin-card">
+                    <h3>Manage News</h3>
+                    <p>Create, edit and plan news updates and announcements.</p>
+                    <a href="admin-news.html">Open Module</a>
+                </div>
+
+                <div class="admin-card">
+                    <h3>Manage Gallery</h3>
+                    <p>Organize activity photos, captions and gallery categories.</p>
+                    <a href="admin-gallery.html">Open Module</a>
+                </div>
+
+                <div class="admin-card">
+                    <h3>Manage Resources</h3>
+                    <p>Track downloadable documents, reports, newsletters and policies.</p>
+                    <a href="admin-resources.html">Open Module</a>
+                </div>
+
+                <div class="admin-card">
+                    <h3>Manage Members</h3>
+                    <p>Track individual, institutional and international membership records.</p>
+                    <a href="admin-members.html">Open Module</a>
+                </div>
+
+                <div class="admin-card">
+                    <h3>Manage Volunteers</h3>
+                    <p>Track volunteer interests, skill areas, availability and status.</p>
+                    <a href="admin-volunteers.html">Open Module</a>
+                </div>
+
+                <div class="admin-card">
+                    <h3>Website Settings</h3>
+                    <p>Update contact details, social links, organization information and admin notes.</p>
+                    <a href="admin-settings.html">Open Module</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="admin-section">
+
+            <h2>Recent Administrative Activities</h2>
+
+            <div class="admin-table-box">
+
+                <table>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Module</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr>
+                        <td>GAIDI website structure completed</td>
+                        <td>Website</td>
+                        <td><span class="status-active">Completed</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Resource Centre created with downloadable files</td>
+                        <td>Resources</td>
+                        <td><span class="status-active">Completed</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>GAIDI Assistant chatbot integrated</td>
+                        <td>Chatbot</td>
+                        <td><span class="status-active">Active</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Volunteer and membership pages created</td>
+                        <td>Forms</td>
+                        <td><span class="status-pending">Needs Database</span></td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

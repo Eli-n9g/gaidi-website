@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manage Members | GAIDI Admin</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+
+<style>
+body{
+    background:#f4f4f4;
+}
+
+.admin-topbar{
+    background:#0A2E5D;
+    color:white;
+    padding:20px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.admin-topbar h1{
+    font-size:24px;
+}
+
+.admin-topbar a,
+.admin-topbar button{
+    background:#F4A300;
+    color:white;
+    text-decoration:none;
+    border:none;
+    padding:10px 16px;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-left:8px;
+}
+
+.admin-section{
+    padding:40px 7%;
+}
+
+.admin-section h2{
+    color:#0A2E5D;
+    margin-bottom:20px;
+}
+
+.admin-form,
+.admin-table-box{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+    margin-bottom:35px;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.admin-form button{
+    background:#0B7A3B;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.admin-form button:hover{
+    background:#F4A300;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#0A2E5D;
+    color:white;
+}
+
+.status-active{
+    background:#0B7A3B;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+.status-pending{
+    background:#F4A300;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+@media(max-width:900px){
+    .admin-topbar{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    table{
+        font-size:12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<script>
+if(localStorage.getItem("gaidi_admin_logged_in") !== "true"){
+    window.location.href = "admin-login.html";
+}
+</script>
+
+<div class="admin-topbar">
+    <h1>GAIDI Admin: Manage Members</h1>
+
+    <div>
+        <a href="admin.html">Dashboard</a>
+        <button onclick="logoutAdmin()">Logout</button>
+    </div>
+</div>
+
+<section class="admin-section">
+
+<h2>Add Member Record</h2>
+
+<div class="admin-form">
+
+    <input type="text" placeholder="Full Name / Organization Name">
+
+    <select>
+        <option>Select Membership Category</option>
+        <option>Individual Member</option>
+        <option>Institutional Member</option>
+        <option>International Member</option>
+        <option>Honorary Member</option>
+    </select>
+
+    <input type="email" placeholder="Email Address">
+
+    <input type="tel" placeholder="Phone Number">
+
+    <input type="text" placeholder="District / Country">
+
+    <select>
+        <option>Select Status</option>
+        <option>Pending Review</option>
+        <option>Approved</option>
+        <option>Active</option>
+        <option>Inactive</option>
+    </select>
+
+    <textarea rows="5" placeholder="Notes, expertise, motivation or membership remarks"></textarea>
+
+    <button onclick="alert('Member record saved as draft. Real database connection will be added later.')">
+        Save Member Record
+    </button>
+
+</div>
+
+</section>
+
+<section class="admin-section">
+
+<h2>Current Membership Records</h2>
+
+<div class="admin-table-box">
+
+<table>
+    <tr>
+        <th>Name / Organization</th>
+        <th>Category</th>
+        <th>Contact</th>
+        <th>Location</th>
+        <th>Status</th>
+    </tr>
+
+    <tr>
+        <td>Dr. Felix Eling</td>
+        <td>Founding Member</td>
+        <td>+256 779 481 284</td>
+        <td>Uganda</td>
+        <td><span class="status-active">Active</span></td>
+    </tr>
+
+    <tr>
+        <td>Mr. Ayaka Isaac</td>
+        <td>Founding Member</td>
+        <td>+256 773 028 180</td>
+        <td>Uganda</td>
+        <td><span class="status-active">Active</span></td>
+    </tr>
+
+    <tr>
+        <td>Future Institutional Partner</td>
+        <td>Institutional Member</td>
+        <td>Pending</td>
+        <td>Uganda / International</td>
+        <td><span class="status-pending">Pending</span></td>
+    </tr>
+</table>
+
+</div>
+
+</section>
+
+<section class="admin-section">
+
+<h2>Membership Summary</h2>
+
+<div class="dashboard-stats">
+
+    <div class="stat-card">
+        <h3>2</h3>
+        <p>Founding Members</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>4</h3>
+        <p>Membership Categories</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>1</h3>
+        <p>Pending Application</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>2026</h3>
+        <p>Membership Relaunch</p>
+    </div>
+
+</div>
+
+</section>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

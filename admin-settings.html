@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GAIDI Admin Settings</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+
+<style>
+
+body{
+    background:#f4f4f4;
+}
+
+.admin-topbar{
+    background:#0A2E5D;
+    color:white;
+    padding:20px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.admin-topbar h1{
+    font-size:24px;
+}
+
+.admin-topbar a,
+.admin-topbar button{
+    background:#F4A300;
+    color:white;
+    text-decoration:none;
+    border:none;
+    padding:10px 16px;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-left:8px;
+}
+
+.admin-section{
+    padding:40px 7%;
+}
+
+.admin-section h2{
+    color:#0A2E5D;
+    margin-bottom:20px;
+}
+
+.settings-card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+    margin-bottom:30px;
+}
+
+.settings-card input,
+.settings-card textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.settings-card button{
+    background:#0B7A3B;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.settings-card button:hover{
+    background:#F4A300;
+}
+
+.system-status{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.status-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+    border-top:6px solid #0B7A3B;
+}
+
+.status-card h3{
+    color:#0A2E5D;
+    font-size:28px;
+}
+
+@media(max-width:900px){
+
+.system-status{
+    grid-template-columns:1fr;
+}
+
+.admin-topbar{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<script>
+if(localStorage.getItem("gaidi_admin_logged_in") !== "true"){
+    window.location.href = "admin-login.html";
+}
+</script>
+
+<div class="admin-topbar">
+
+<h1>GAIDI Admin Settings</h1>
+
+<div>
+<a href="admin.html">Dashboard</a>
+<button onclick="logoutAdmin()">Logout</button>
+</div>
+
+</div>
+
+<section class="admin-section">
+
+<h2>Organization Information</h2>
+
+<div class="settings-card">
+
+<input type="text" value="Global All Integrated Development Initiative (GAIDI)">
+
+<input type="text" value="Gulu City, Uganda">
+
+<input type="text" value="+256 779 481 284">
+
+<input type="text" value="+256 773 028 180">
+
+<input type="email" value="info@gaidiuganda.org">
+
+<textarea rows="5">Empowering Communities for a Brighter Future</textarea>
+
+<button onclick="alert('Organization settings saved successfully.')">
+Save Organization Settings
+</button>
+
+</div>
+
+</section>
+
+<section class="admin-section">
+
+<h2>Social Media Settings</h2>
+
+<div class="settings-card">
+
+<input type="text" placeholder="Facebook URL">
+
+<input type="text" placeholder="LinkedIn URL">
+
+<input type="text" placeholder="Instagram URL">
+
+<input type="text" placeholder="YouTube URL">
+
+<input type="text" placeholder="X (Twitter) URL">
+
+<button onclick="alert('Social media settings saved successfully.')">
+Save Social Media Settings
+</button>
+
+</div>
+
+</section>
+
+<section class="admin-section">
+
+<h2>Website Status</h2>
+
+<div class="system-status">
+
+<div class="status-card">
+<h3>Online</h3>
+<p>Website Status</p>
+</div>
+
+<div class="status-card">
+<h3>14+</h3>
+<p>Website Pages</p>
+</div>
+
+<div class="status-card">
+<h3>6</h3>
+<p>Admin Modules</p>
+</div>
+
+<div class="status-card">
+<h3>Active</h3>
+<p>Chatbot Status</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="admin-section">
+
+<h2>Administrator Notes</h2>
+
+<div class="settings-card">
+
+<textarea rows="8" placeholder="Write internal administrative notes here..."></textarea>
+
+<button onclick="alert('Administrative note saved.')">
+Save Notes
+</button>
+
+</div>
+
+</section>
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

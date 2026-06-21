@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manage Resources | GAIDI Admin</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+
+<style>
+
+body{
+    background:#f4f4f4;
+}
+
+.admin-topbar{
+    background:#0A2E5D;
+    color:white;
+    padding:20px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.admin-topbar h1{
+    font-size:24px;
+}
+
+.admin-topbar a,
+.admin-topbar button{
+    background:#F4A300;
+    color:white;
+    text-decoration:none;
+    border:none;
+    padding:10px 16px;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-left:8px;
+}
+
+.admin-section{
+    padding:40px 7%;
+}
+
+.admin-section h2{
+    color:#0A2E5D;
+    margin-bottom:20px;
+}
+
+.admin-form,
+.admin-table-box{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+    margin-bottom:35px;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.admin-form button{
+    background:#0B7A3B;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.admin-form button:hover{
+    background:#F4A300;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#0A2E5D;
+    color:white;
+}
+
+.status{
+    background:#0B7A3B;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+.download-count{
+    background:#F4A300;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+@media(max-width:900px){
+
+    .admin-topbar{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    table{
+        font-size:12px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<script>
+if(localStorage.getItem("gaidi_admin_logged_in") !== "true"){
+    window.location.href = "admin-login.html";
+}
+</script>
+
+<div class="admin-topbar">
+
+<h1>GAIDI Admin: Manage Resources</h1>
+
+<div>
+<a href="admin.html">Dashboard</a>
+<button onclick="logoutAdmin()">Logout</button>
+</div>
+
+</div>
+
+<section class="admin-section">
+
+<h2>Add New Resource</h2>
+
+<div class="admin-form">
+
+<input type="text" placeholder="Resource Title">
+
+<select>
+<option>Select Resource Type</option>
+<option>Constitution</option>
+<option>Strategic Plan</option>
+<option>Annual Report</option>
+<option>Newsletter</option>
+<option>Policy Document</option>
+<option>Research Report</option>
+<option>Training Manual</option>
+<option>Project Report</option>
+</select>
+
+<input type="text" placeholder="PDF File Name e.g. constitution.pdf">
+
+<input type="date">
+
+<textarea rows="5" placeholder="Resource Description"></textarea>
+
+<button onclick="alert('Resource record saved successfully.')">
+Save Resource
+</button>
+
+</div>
+
+</section>
+
+<section class="admin-section">
+
+<h2>Current Resource Records</h2>
+
+<div class="admin-table-box">
+
+<table>
+
+<tr>
+<th>Title</th>
+<th>Type</th>
+<th>File</th>
+<th>Downloads</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>GAIDI Constitution</td>
+<td>Constitution</td>
+<td>constitution.pdf</td>
+<td><span class="download-count">120</span></td>
+<td><span class="status">Published</span></td>
+</tr>
+
+<tr>
+<td>Strategic Plan 2026-2030</td>
+<td>Strategic Plan</td>
+<td>strategic-plan.pdf</td>
+<td><span class="download-count">86</span></td>
+<td><span class="status">Published</span></td>
+</tr>
+
+<tr>
+<td>Annual Report 2025</td>
+<td>Annual Report</td>
+<td>annual-report.pdf</td>
+<td><span class="download-count">74</span></td>
+<td><span class="status">Published</span></td>
+</tr>
+
+<tr>
+<td>Community Newsletter</td>
+<td>Newsletter</td>
+<td>newsletter.pdf</td>
+<td><span class="download-count">53</span></td>
+<td><span class="status">Published</span></td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section class="admin-section">
+
+<h2>Resource Statistics</h2>
+
+<div class="dashboard-stats">
+
+<div class="stat-card">
+<h3>4</h3>
+<p>Published Documents</p>
+</div>
+
+<div class="stat-card">
+<h3>333</h3>
+<p>Total Downloads</p>
+</div>
+
+<div class="stat-card">
+<h3>2</h3>
+<p>Policies Planned</p>
+</div>
+
+<div class="stat-card">
+<h3>100%</h3>
+<p>Public Access</p>
+</div>
+
+</div>
+
+</section>
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

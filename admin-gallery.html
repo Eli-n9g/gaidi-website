@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Gallery | GAIDI Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+    <style>
+        body{
+            background:#f4f4f4;
+        }
+
+        .admin-topbar{
+            background:#0A2E5D;
+            color:white;
+            padding:20px 7%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .admin-topbar h1{
+            font-size:24px;
+        }
+
+        .admin-topbar a,
+        .admin-topbar button{
+            background:#F4A300;
+            color:white;
+            text-decoration:none;
+            border:none;
+            padding:10px 16px;
+            border-radius:5px;
+            font-weight:bold;
+            cursor:pointer;
+            margin-left:8px;
+        }
+
+        .admin-section{
+            padding:40px 7%;
+        }
+
+        .admin-section h2{
+            color:#0A2E5D;
+            margin-bottom:20px;
+        }
+
+        .admin-form,
+        .admin-table-box{
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.12);
+            margin-bottom:35px;
+        }
+
+        .admin-form input,
+        .admin-form select,
+        .admin-form textarea{
+            width:100%;
+            padding:13px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        .admin-form button{
+            background:#0B7A3B;
+            color:white;
+            border:none;
+            padding:14px 25px;
+            border-radius:5px;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        .admin-form button:hover{
+            background:#F4A300;
+        }
+
+        .gallery-admin-grid{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:20px;
+        }
+
+        .gallery-admin-card{
+            background:white;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        .gallery-admin-card img{
+            width:100%;
+            height:180px;
+            object-fit:cover;
+        }
+
+        .gallery-admin-card div{
+            padding:15px;
+        }
+
+        .gallery-admin-card h3{
+            color:#0A2E5D;
+            margin-bottom:8px;
+            font-size:17px;
+        }
+
+        .status{
+            display:inline-block;
+            background:#0B7A3B;
+            color:white;
+            padding:5px 10px;
+            border-radius:20px;
+            font-size:13px;
+            margin-top:8px;
+        }
+
+        @media(max-width:900px){
+            .admin-topbar{
+                flex-direction:column;
+                gap:15px;
+                text-align:center;
+            }
+
+            .gallery-admin-grid{
+                grid-template-columns:1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<script>
+if(localStorage.getItem("gaidi_admin_logged_in") !== "true"){
+    window.location.href = "admin-login.html";
+}
+</script>
+
+<div class="admin-topbar">
+    <h1>GAIDI Admin: Manage Gallery</h1>
+
+    <div>
+        <a href="admin.html">Dashboard</a>
+        <button onclick="logoutAdmin()">Logout</button>
+    </div>
+</div>
+
+<section class="admin-section">
+
+    <h2>Add Gallery Image Record</h2>
+
+    <div class="admin-form">
+
+        <input type="text" placeholder="Photo Title">
+
+        <select>
+            <option>Select Photo Category</option>
+            <option>Community Outreach</option>
+            <option>Health & Wellbeing</option>
+            <option>Disability Inclusion</option>
+            <option>Education & Research</option>
+            <option>Livelihoods & Agriculture</option>
+            <option>Partnerships</option>
+            <option>Events & Meetings</option>
+        </select>
+
+        <input type="text" placeholder="Image file name e.g. gallery1.jpg">
+
+        <input type="date">
+
+        <textarea rows="5" placeholder="Short photo caption or description"></textarea>
+
+        <button onclick="alert('Gallery image record saved as draft. Real upload will be connected later.')">
+            Save Gallery Record
+        </button>
+
+    </div>
+
+</section>
+
+<section class="admin-section">
+
+    <h2>Current Gallery Records</h2>
+
+    <div class="gallery-admin-grid">
+
+        <div class="gallery-admin-card">
+            <img src="images/gallery1.jpg" alt="Gallery Image">
+            <div>
+                <h3>Community Activity</h3>
+                <p>Category: Community Outreach</p>
+                <p>File: gallery1.jpg</p>
+                <span class="status">Published</span>
+            </div>
+        </div>
+
+        <div class="gallery-admin-card">
+            <img src="images/gallery2.jpg" alt="Gallery Image">
+            <div>
+                <h3>Health Engagement</h3>
+                <p>Category: Health & Wellbeing</p>
+                <p>File: gallery2.jpg</p>
+                <span class="status">Published</span>
+            </div>
+        </div>
+
+        <div class="gallery-admin-card">
+            <img src="images/gallery3.jpg" alt="Gallery Image">
+            <div>
+                <h3>Inclusive Development</h3>
+                <p>Category: Disability Inclusion</p>
+                <p>File: gallery3.jpg</p>
+                <span class="status">Published</span>
+            </div>
+        </div>
+
+        <div class="gallery-admin-card">
+            <img src="images/gallery4.jpg" alt="Gallery Image">
+            <div>
+                <h3>Livelihood Activity</h3>
+                <p>Category: Livelihoods</p>
+                <p>File: gallery4.jpg</p>
+                <span class="status">Published</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

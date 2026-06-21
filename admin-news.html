@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage News | GAIDI Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+    <style>
+        body{
+            background:#f4f4f4;
+        }
+
+        .admin-topbar{
+            background:#0A2E5D;
+            color:white;
+            padding:20px 7%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .admin-topbar h1{
+            font-size:24px;
+        }
+
+        .admin-topbar a,
+        .admin-topbar button{
+            background:#F4A300;
+            color:white;
+            text-decoration:none;
+            border:none;
+            padding:10px 16px;
+            border-radius:5px;
+            font-weight:bold;
+            cursor:pointer;
+            margin-left:8px;
+        }
+
+        .admin-section{
+            padding:40px 7%;
+        }
+
+        .admin-section h2{
+            color:#0A2E5D;
+            margin-bottom:20px;
+        }
+
+        .admin-form,
+        .admin-table-box{
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.12);
+            margin-bottom:35px;
+        }
+
+        .admin-form input,
+        .admin-form select,
+        .admin-form textarea{
+            width:100%;
+            padding:13px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        .admin-form button{
+            background:#0B7A3B;
+            color:white;
+            border:none;
+            padding:14px 25px;
+            border-radius:5px;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        .admin-form button:hover{
+            background:#F4A300;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th, td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:left;
+        }
+
+        th{
+            background:#0A2E5D;
+            color:white;
+        }
+
+        .status{
+            background:#0B7A3B;
+            color:white;
+            padding:5px 10px;
+            border-radius:20px;
+            font-size:13px;
+        }
+
+        @media(max-width:900px){
+            .admin-topbar{
+                flex-direction:column;
+                gap:15px;
+                text-align:center;
+            }
+
+            table{
+                font-size:13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<script>
+if(localStorage.getItem("gaidi_admin_logged_in") !== "true"){
+    window.location.href = "admin-login.html";
+}
+</script>
+
+<div class="admin-topbar">
+    <h1>GAIDI Admin: Manage News</h1>
+
+    <div>
+        <a href="admin.html">Dashboard</a>
+        <button onclick="logoutAdmin()">Logout</button>
+    </div>
+</div>
+
+<section class="admin-section">
+
+    <h2>Add News Update</h2>
+
+    <div class="admin-form">
+
+        <input type="text" placeholder="News Title">
+
+        <select>
+            <option>Select News Category</option>
+            <option>Institutional Update</option>
+            <option>Disability Inclusion</option>
+            <option>Health & Wellbeing</option>
+            <option>Livelihoods</option>
+            <option>Education & Research</option>
+            <option>Partnerships</option>
+            <option>Volunteer Opportunity</option>
+        </select>
+
+        <input type="date">
+
+        <textarea rows="6" placeholder="Write short news summary here"></textarea>
+
+        <input type="text" placeholder="Image file name e.g. news1.jpg">
+
+        <button onclick="alert('News saved as draft. Real publishing will be connected later.')">
+            Save News Draft
+        </button>
+
+    </div>
+
+</section>
+
+<section class="admin-section">
+
+    <h2>Current News Records</h2>
+
+    <div class="admin-table-box">
+
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>GAIDI Begins Revitalization Process</td>
+                <td>Institutional Update</td>
+                <td>2026</td>
+                <td><span class="status">Published</span></td>
+            </tr>
+
+            <tr>
+                <td>Disability Inclusion Becomes a Core Pillar</td>
+                <td>Disability Inclusion</td>
+                <td>2026</td>
+                <td><span class="status">Published</span></td>
+            </tr>
+
+            <tr>
+                <td>Call for Partnerships and Collaboration</td>
+                <td>Partnerships</td>
+                <td>2026</td>
+                <td><span class="status">Published</span></td>
+            </tr>
+        </table>
+
+    </div>
+
+</section>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

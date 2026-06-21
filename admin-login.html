@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAIDI Admin Login</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body{
+            background:#0A2E5D;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            height:100vh;
+        }
+
+        .login-box{
+            background:white;
+            width:380px;
+            padding:35px;
+            border-radius:12px;
+            box-shadow:0 5px 25px rgba(0,0,0,0.3);
+            text-align:center;
+        }
+
+        .login-box img{
+            width:100px;
+            margin-bottom:15px;
+        }
+
+        .login-box h2{
+            color:#0A2E5D;
+            margin-bottom:10px;
+        }
+
+        .login-box p{
+            margin-bottom:25px;
+            color:#555;
+        }
+
+        .login-box input{
+            width:100%;
+            padding:13px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:6px;
+        }
+
+        .login-box button{
+            width:100%;
+            padding:13px;
+            background:#0B7A3B;
+            color:white;
+            border:none;
+            border-radius:6px;
+            font-weight:bold;
+            cursor:pointer;
+        }
+
+        .login-box button:hover{
+            background:#F4A300;
+        }
+
+        .error{
+            color:red;
+            margin-top:15px;
+            font-size:14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <img src="images/logo.png" alt="GAIDI Logo">
+
+    <h2>GAIDI Admin Login</h2>
+    <p>Authorized access only</p>
+
+    <input type="text" id="username" placeholder="Username">
+
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="loginAdmin()">Login</button>
+
+    <div class="error" id="errorMessage"></div>
+
+</div>
+
+<script>
+function loginAdmin(){
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if(username === "admin" && password === "gaidi2026"){
+        localStorage.setItem("gaidi_admin_logged_in", "true");
+        window.location.href = "admin.html";
+    } else {
+        document.getElementById("errorMessage").innerText = "Invalid username or password.";
+    }
+}
+</script>
+
+</body>
+</html>
