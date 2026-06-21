@@ -2,47 +2,46 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<head>
-
-<link rel="icon" type="image/png" href="favicon/favicon.png">
-
-<meta charset="UTF-8">
-
-<title>GAIDI Uganda</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-</head>
     <title>Membership | GAIDI</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<button class="menu-toggle" onclick="toggleMenu()">
-    ☰
-</button>
+<header>
+    <div class="logo-container">
+        <img src="images/logo.png" alt="GAIDI Logo">
+        <div class="logo-text">
+            <h1>GAIDI</h1>
+            <p>Global All Integrated Development Initiative</p>
+        </div>
+    </div>
 
-<nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="founders.html">Founders</a>
-    <a href="governance.html">Governance</a>
-    <a href="programs.html">Programs</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="beneficiaries.html">Beneficiaries</a>
-    <a href="partners.html">Partnerships</a>
-    <a href="news.html">News</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="impact.html">Impact</a>
-    <a href="resources.html">Resources</a>
-    <a href="membership.html">Membership</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="founders.html">Founders</a>
+        <a href="governance.html">Governance</a>
+        <a href="programs.html">Programs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="beneficiaries.html">Beneficiaries</a>
+        <a href="partners.html">Partnerships</a>
+        <a href="news.html">News</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="impact.html">Impact</a>
+        <a href="resources.html">Resources</a>
+        <a href="membership.html">Membership</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
 <section class="page-hero">
     <h2>Membership</h2>
@@ -53,9 +52,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <h2>Why Become a Member?</h2>
 
     <p>
-        Membership in GAIDI provides an opportunity to contribute to the governance,
-        growth and sustainability of the organization while supporting community
-        empowerment, disability inclusion, education, health and livelihoods.
+        Membership in GAIDI provides an opportunity to contribute to governance,
+        growth and sustainability while supporting community empowerment,
+        disability inclusion, education, health and livelihoods.
     </p>
 
     <p>
@@ -92,18 +91,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <h3>Honorary Membership</h3>
         <p>
             Awarded to distinguished individuals who have made exceptional contributions
-            to community development and the objectives of GAIDI.
+            to community development and GAIDI’s objectives.
         </p>
     </div>
 
 </section>
 
 <section class="section grey">
-
     <h2>Member Benefits</h2>
 
     <div class="pillars">
-
         <div class="pillar">
             <h3>Participation</h3>
             <p>Participate in meetings, consultations and organizational activities.</p>
@@ -123,24 +120,29 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             <h3>Learning</h3>
             <p>Access to capacity-building opportunities and organizational updates.</p>
         </div>
-
     </div>
-
 </section>
 
 <section class="membership-form-section">
 
     <h2>Membership Expression of Interest</h2>
 
-    <form class="membership-form">
+    <p>
+        Fill in the form below to express interest in becoming a GAIDI member.
+        Your information will be submitted directly to the GAIDI membership database.
+    </p>
 
-        <input type="text" placeholder="Full Name / Organization Name" required>
+    <form class="membership-form" onsubmit="event.preventDefault(); submitMembershipForm(this);">
 
-        <input type="email" placeholder="Email Address" required>
+        <input type="text" name="fullName" placeholder="Full Name / Organization Name" required>
 
-        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Email Address" required>
 
-        <select required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <input type="text" name="location" placeholder="District / Country" required>
+
+        <select name="category" required>
             <option value="">Select Membership Category</option>
             <option>Individual Membership</option>
             <option>Institutional Membership</option>
@@ -148,7 +150,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             <option>Honorary Membership</option>
         </select>
 
-        <textarea rows="6" placeholder="Why would you like to join GAIDI?" required></textarea>
+        <textarea name="message" rows="6" placeholder="Why would you like to join GAIDI?" required></textarea>
 
         <button type="submit">Apply for Membership</button>
 
@@ -157,15 +159,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 </section>
 
 <section class="section call-to-action">
-
     <h2>Together We Are Stronger</h2>
-
     <p>
         Join GAIDI and contribute to creating inclusive, resilient and empowered communities.
     </p>
-
     <a href="contact.html" class="btn">Contact Us</a>
-
 </section>
 
 <footer class="main-footer">
@@ -205,24 +203,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             <p>info@gaidiuganda.org</p>
 
             <div class="footer-socials">
-
-    <a href="#">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-
-    <a href="#">
-        <i class="fab fa-linkedin-in"></i>
-    </a>
-
-    <a href="https://wa.me/256779481284">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <a href="mailto:info@gaidiuganda.org">
-        <i class="fas fa-envelope"></i>
-    </a>
-
-</div>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/256779481284"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:info@gaidiuganda.org"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
 
     </div>
@@ -236,18 +221,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <a href="https://wa.me/256779481284" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
-<script src="js/script.js"></script>
+
 <div class="chatbot-container" id="chatbot">
     <div class="chatbot-header">
         <span>GAIDI Assistant</span>
         <button onclick="toggleChatbot()">×</button>
     </div>
 
-    <div class="chatbot-messages" id="chatMessages">
-        <div class="bot-message">
-            Hello 👋 I am GAIDI Assistant. How can I help you today?
-        </div>
-    </div>
+    <div class="chatbot-messages" id="chatMessages"></div>
 
     <div class="chatbot-options">
         <button onclick="quickReply('What is GAIDI?')">What is GAIDI?</button>
@@ -267,5 +248,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <button class="chatbot-toggle" onclick="toggleChatbot()">
     <i class="fas fa-robot"></i>
 </button>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
