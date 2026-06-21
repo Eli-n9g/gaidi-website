@@ -132,7 +132,8 @@
         Your information will be submitted directly to the GAIDI membership database.
     </p>
 
-    <form class="membership-form" onsubmit="event.preventDefault(); submitMembershipForm(this);">
+    <form class="membership-form" action="https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P__BLKthGKGatx4methTzlhv4Ya6wbD5rB_Yjzxw-PhQ8osCzPDYQ/exec" method="POST">
+	<input type="hidden" name="formType" value="membership">
 
         <input type="text" name="fullName" placeholder="Full Name / Organization Name" required>
 
