@@ -37,22 +37,34 @@ const gaidiFormURL = "https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P_
 
 /* FORM SUBMISSION */
 function submitGAIDIForm(formType, formData, formElement) {
+
+    const submitButton = formElement.querySelector("button[type='submit']");
+    const originalText = submitButton.innerText;
+
+    submitButton.innerText = "Submitting...";
+    submitButton.disabled = true;
+
     fetch(gaidiFormURL, {
         method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "text/plain"
+        },
         body: JSON.stringify({
             formType: formType,
             ...formData
         })
     })
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(data) {
+    .then(function() {
         alert("Thank you. Your submission has been received successfully.");
         formElement.reset();
+        submitButton.innerText = originalText;
+        submitButton.disabled = false;
     })
     .catch(function(error) {
         alert("Submission failed. Please try again or contact GAIDI directly.");
+        submitButton.innerText = originalText;
+        submitButton.disabled = false;
         console.error("Error:", error);
     });
 }
