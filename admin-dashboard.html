@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GAIDI Admin Dashboard</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+}
+
+.header{
+    background:#0A2E5D;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+.card i{
+    font-size:40px;
+    margin-bottom:15px;
+    color:#0A2E5D;
+}
+
+.card h2{
+    margin:10px 0;
+    font-size:40px;
+}
+
+.card p{
+    font-size:18px;
+}
+
+.quick-links{
+    padding:20px;
+}
+
+.quick-links h2{
+    color:#0A2E5D;
+}
+
+.quick-links a{
+    display:block;
+    margin:10px 0;
+    text-decoration:none;
+    color:#0A2E5D;
+    font-weight:bold;
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+    background:#0A2E5D;
+    color:white;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="header">
+    <h1>GAIDI Admin Dashboard</h1>
+    <p>Management Information System</p>
+</div>
+
+<div class="dashboard">
+
+<div class="card">
+<i class="fas fa-envelope"></i>
+<h2 id="contacts">0</h2>
+<p>Contacts</p>
+</div>
+
+<div class="card">
+<i class="fas fa-hands-helping"></i>
+<h2 id="volunteers">0</h2>
+<p>Volunteers</p>
+</div>
+
+<div class="card">
+<i class="fas fa-users"></i>
+<h2 id="members">0</h2>
+<p>Members</p>
+</div>
+
+<div class="card">
+<i class="fas fa-graduation-cap"></i>
+<h2 id="interns">0</h2>
+<p>Interns</p>
+</div>
+
+</div>
+
+<div class="quick-links">
+
+<h2>Quick Access</h2>
+
+<a href="admin-contacts.html">
+📩 Manage Contacts
+</a>
+
+<a href="admin-volunteers.html">
+🤝 Manage Volunteers
+</a>
+
+<a href="admin-members.html">
+👥 Manage Members
+</a>
+
+<a href="admin-gallery.html">
+🖼 Manage Gallery
+</a>
+
+</div>
+
+<div class="footer">
+GAIDI Admin Dashboard © 2026
+</div>
+
+<script>
+
+document.getElementById("contacts").innerHTML = "--";
+document.getElementById("volunteers").innerHTML = "--";
+document.getElementById("members").innerHTML = "--";
+document.getElementById("interns").innerHTML = "--";
+
+</script>
+
+</body>
+</html>
