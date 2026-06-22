@@ -360,6 +360,8 @@ function getBotResponse(message) {
     if (message.includes("founder") || message.includes("leadership")) {
         return `GAIDI was founded by Dr. Felix Eling Michael and co-founded by Mr. Ayaka Isaac.<br><br><a href="founders.html">View Founders Page</a>`;
     }
-
+if (message.includes("internship") || message.includes("intern") || message.includes("attachment")) {
+    return `GAIDI offers internship opportunities in public health, research, monitoring and evaluation, disability inclusion, livelihoods, education, communications, administration and partnerships.<br><br><a href="internship.html">Apply for Internship</a>`;
+}
     return `Thank you for your question. Please contact GAIDI directly through WhatsApp or the Contact page for more assistance.<br><br><a href="contact.html">Contact GAIDI</a>`;
 }
