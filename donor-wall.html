@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Wall | GAIDI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/advanced.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="images/logo.png" alt="GAIDI Logo">
+        <div class="logo-text">
+            <h1>GAIDI</h1>
+            <p>Global All Integrated Development Initiative</p>
+        </div>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="programs.html">Programs</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="internship.html">Internship</a>
+        <a href="donate.html">Donate</a>
+        <a href="donor-wall.html">Donor Wall</a>
+        <a href="success-stories.html">Success Stories</a>
+        <a href="impact-map.html">Impact Map</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="advanced-hero">
+    <h1>GAIDI Donor Wall</h1>
+    <p>Recognizing supporters who help us empower communities for a brighter future.</p>
+</section>
+
+<section class="section">
+    <h2>Donation Summary</h2>
+
+    <div class="advanced-grid">
+        <div class="advanced-card">
+            <h3 id="totalDonationRecords">0</h3>
+            <p>Total Donation Records</p>
+        </div>
+
+        <div class="advanced-card">
+            <h3 id="totalRaised">UGX 0</h3>
+            <p>Total Confirmed Raised</p>
+        </div>
+
+        <div class="advanced-card">
+            <h3 id="publicDonorCount">0</h3>
+            <p>Publicly Recognized Donors</p>
+        </div>
+    </div>
+</section>
+
+<section class="section grey">
+    <h2>Fundraising Progress</h2>
+
+    <div class="advanced-grid">
+        <div class="progress-box">
+            <h3>General Support Fund</h3>
+            <p>Goal: UGX 10,000,000</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="generalFund">0%</div>
+            </div>
+        </div>
+
+        <div class="progress-box">
+            <h3>Health & Wellbeing Fund</h3>
+            <p>Goal: UGX 8,000,000</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="healthFund">0%</div>
+            </div>
+        </div>
+
+        <div class="progress-box">
+            <h3>Education & Research Fund</h3>
+            <p>Goal: UGX 7,000,000</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="educationFund">0%</div>
+            </div>
+        </div>
+
+        <div class="progress-box">
+            <h3>Livelihoods Fund</h3>
+            <p>Goal: UGX 6,000,000</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="livelihoodsFund">0%</div>
+            </div>
+        </div>
+
+        <div class="progress-box">
+            <h3>Disability Inclusion Fund</h3>
+            <p>Goal: UGX 5,000,000</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="disabilityFund">0%</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Our Public Supporters</h2>
+
+    <p>
+        Only donors who choose public recognition appear here. Other contributions remain anonymous.
+    </p>
+
+    <div id="donorWallBox">
+        <p>Loading donor records...</p>
+    </div>
+</section>
+
+<section class="section call-to-action">
+    <h2>Support GAIDI Today</h2>
+    <p>Your contribution can help transform lives and strengthen communities.</p>
+    <a href="donate.html" class="btn">Donate Now</a>
+</section>
+
+<footer class="main-footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>GAIDI</h3>
+            <p>Empowering communities through health, education, livelihoods, research and disability inclusion.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="programs.html">Programs</a>
+            <a href="donate.html">Donate</a>
+            <a href="donor-wall.html">Donor Wall</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Get Involved</h3>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="internship.html">Internship</a>
+            <a href="membership.html">Membership</a>
+            <a href="partners.html">Partnerships</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Gulu City, Uganda</p>
+            <p>+256 779 481 284</p>
+            <p>info@gaidiuganda.org</p>
+            <div class="footer-socials" id="footerSocials"></div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Global All Integrated Development Initiative (GAIDI). All Rights Reserved.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/256779481284" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<div class="chatbot-container" id="chatbot">
+    <div class="chatbot-header">
+        <span>GAIDI Assistant</span>
+        <button onclick="toggleChatbot()">×</button>
+    </div>
+
+    <div class="chatbot-messages" id="chatMessages"></div>
+
+    <div class="chatbot-options">
+        <button onclick="quickReply('Programs')">Programs</button>
+        <button onclick="quickReply('Volunteer')">Volunteer</button>
+        <button onclick="quickReply('Internship')">Internship</button>
+        <button onclick="quickReply('Donate')">Donate</button>
+        <button onclick="quickReply('Contact')">Contact</button>
+    </div>
+
+    <div class="chatbot-input">
+        <input type="text" id="userInput" placeholder="Type your question...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<button class="chatbot-toggle" onclick="toggleChatbot()">
+    <i class="fas fa-robot"></i>
+</button>
+
+<script src="js/script.js"></script>
+<script src="js/layout.js"></script>
+
+<script>
+insertGAIDISocials("footerSocials");
+
+const appURL = "https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P__BLKthGKGatx4methTzlhv4Ya6wbD5rB_Yjzxw-PhQ8osCzPDYQ/exec";
+
+function formatUGX(amount){
+    return "UGX " + Number(amount || 0).toLocaleString();
+}
+
+function setProgress(id, raised, goal){
+    const bar = document.getElementById(id);
+    if(!bar) return;
+
+    const percent = Math.min(Math.round((Number(raised || 0) / goal) * 100), 100);
+    bar.style.width = percent + "%";
+    bar.innerHTML = percent + "%";
+}
+
+fetch(appURL)
+.then(response => response.json())
+.then(data => {
+    const publicDonors = data.publicDonors || [];
+    const totals = data.programTotals || {};
+
+    document.getElementById("totalDonationRecords").innerHTML = data.donations || 0;
+    document.getElementById("totalRaised").innerHTML = formatUGX(data.totalRaised || 0);
+    document.getElementById("publicDonorCount").innerHTML = publicDonors.length;
+
+    setProgress("generalFund", totals.general || 0, 10000000);
+    setProgress("healthFund", totals.health || 0, 8000000);
+    setProgress("educationFund", totals.education || 0, 7000000);
+    setProgress("livelihoodsFund", totals.livelihoods || 0, 6000000);
+    setProgress("disabilityFund", totals.disability || 0, 5000000);
+
+    const donorBox = document.getElementById("donorWallBox");
+
+    if(publicDonors.length === 0){
+        donorBox.innerHTML = `
+            <div class="advanced-card">
+                <h3>No public confirmed donors yet</h3>
+                <p>Confirmed donors who choose public recognition will appear here.</p>
+            </div>
+        `;
+        return;
+    }
+
+    let table = `
+        <table class="donor-table">
+            <tr>
+                <th>Donor / Organization</th>
+                <th>Contribution</th>
+                <th>Program Area</th>
+                <th>Donation Type</th>
+            </tr>
+    `;
+
+    publicDonors.forEach(function(donor){
+        table += `
+            <tr>
+                <td>${donor.name}</td>
+                <td>${donor.currency} ${Number(donor.contribution || 0).toLocaleString()}</td>
+                <td>${donor.programArea}</td>
+                <td>${donor.donationType}</td>
+            </tr>
+        `;
+    });
+
+    table += `</table>`;
+    donorBox.innerHTML = table;
+})
+.catch(error => {
+    document.getElementById("donorWallBox").innerHTML = `
+        <div class="advanced-card">
+            <h3>Unable to load donor records</h3>
+            <p>Please try again later.</p>
+        </div>
+    `;
+    console.log("Donor wall error:", error);
+});
+</script>
+
+</body>
+</html>

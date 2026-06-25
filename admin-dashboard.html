@@ -141,14 +141,24 @@ body{
 GAIDI Admin Dashboard © 2026
 </div>
 
-<script>
+fetch("https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P__BLKthGKGatx4methTzlhv4Ya6wbD5rB_Yjzxw-PhQ8osCzPDYQ/exec")
+.then(response => response.json())
+.then(data => {
 
-document.getElementById("contacts").innerHTML = "--";
-document.getElementById("volunteers").innerHTML = "--";
-document.getElementById("members").innerHTML = "--";
-document.getElementById("interns").innerHTML = "--";
+document.getElementById("contacts").innerHTML =
+data.contacts;
 
-</script>
+document.getElementById("volunteers").innerHTML =
+data.volunteers;
+
+document.getElementById("members").innerHTML =
+data.members;
+
+document.getElementById("interns").innerHTML =
+data.interns;
+
+})
+.catch(error => console.log(error));
 
 </body>
 </html>

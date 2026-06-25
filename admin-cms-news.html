@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS News | GAIDI Admin</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/advanced.css">
+</head>
+
+<body onload="protectAdmin()">
+
+<div class="admin-layout">
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-logo">
+            <img src="images/logo.png" alt="GAIDI Logo">
+            <h2>GAIDI Admin</h2>
+            <p>News CMS</p>
+        </div>
+
+        <a href="admin.html">Dashboard</a>
+        <a href="admin-cms-news.html">CMS News</a>
+        <a href="admin-advanced.html">Advanced Tools</a>
+        <a href="admin-news.html">Old News Manager</a>
+        <a href="admin-gallery.html">Gallery</a>
+        <a href="admin-resources.html">Resources</a>
+        <a href="index.html">View Website</a>
+
+        <div class="admin-profile">
+            <strong>Administrator</strong>
+            <p>GAIDI Secretariat</p>
+            <p>Status: Active</p>
+        </div>
+
+    </aside>
+
+    <main class="admin-main">
+
+        <div class="admin-topbar">
+            <h1>Publish News / Updates</h1>
+            <button class="logout-btn" onclick="logoutAdmin()">Logout</button>
+        </div>
+
+        <section class="admin-section">
+
+            <h2>Add News Article</h2>
+
+            <div class="admin-form">
+
+                <form action="https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P__BLKthGKGatx4methTzlhv4Ya6wbD5rB_Yjzxw-PhQ8osCzPDYQ/exec" method="POST">
+
+                    <input type="hidden" name="formType" value="cms_news">
+
+                    <input type="text" name="title" placeholder="News Title" required>
+
+                    <select name="category" required>
+                        <option value="">Select Category</option>
+                        <option>Institutional Update</option>
+                        <option>Health & Wellbeing</option>
+                        <option>Education & Research</option>
+                        <option>Disability Inclusion</option>
+                        <option>Livelihoods</option>
+                        <option>Partnerships</option>
+                        <option>Volunteers</option>
+                        <option>Internship</option>
+                        <option>Donation & Support</option>
+                    </select>
+
+                    <input type="date" name="date" required>
+
+                    <input type="text" name="image" placeholder="Image file name e.g. news1.jpg or images/news1.jpg">
+
+                    <textarea name="summary" rows="4" placeholder="Short summary" required></textarea>
+
+                    <textarea name="fullStory" rows="10" placeholder="Full story / article body" required></textarea>
+
+                    <button type="submit">Publish News</button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <section class="admin-section">
+
+            <h2>Publishing Notes</h2>
+
+            <div class="admin-table-box">
+                <p>
+                    Published news will be saved in the <strong>CMS_News</strong> sheet.
+                    The public News page will later load published articles automatically.
+                </p>
+
+                <p>
+                    For images, place the image inside your <strong>images</strong> folder and enter:
+                </p>
+
+                <p><strong>Example:</strong> images/news1.jpg</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

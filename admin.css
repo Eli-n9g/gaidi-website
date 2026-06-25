@@ -1,0 +1,215 @@
+/* GAIDI ADVANCED ADMIN THEME */
+
+body{
+    background:#f4f6f8;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
+
+.admin-layout{
+    display:flex;
+    min-height:100vh;
+}
+
+.admin-sidebar{
+    width:260px;
+    background:#0A2E5D;
+    color:white;
+    padding:25px 18px;
+    position:fixed;
+    height:100vh;
+}
+
+.admin-logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.admin-logo img{
+    width:90px;
+    margin-bottom:10px;
+}
+
+.admin-logo h2{
+    color:#F4A300;
+    font-size:22px;
+}
+
+.admin-sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    margin-bottom:8px;
+    border-radius:6px;
+}
+
+.admin-sidebar a:hover{
+    background:#0B7A3B;
+}
+
+.admin-main{
+    margin-left:260px;
+    width:calc(100% - 260px);
+}
+
+.admin-topbar{
+    background:white;
+    padding:20px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.admin-topbar h1{
+    color:#0A2E5D;
+}
+
+.logout-btn{
+    background:#F4A300;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.admin-section{
+    padding:35px 7%;
+}
+
+.dashboard-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-bottom:35px;
+}
+
+.stat-card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+    border-top:6px solid #0B7A3B;
+    text-align:center;
+}
+
+.stat-card h3{
+    color:#0A2E5D;
+    font-size:35px;
+}
+
+.admin-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.admin-card,
+.admin-form,
+.admin-table-box,
+.settings-card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+}
+
+.admin-card h3,
+.admin-section h2{
+    color:#0A2E5D;
+    margin-bottom:15px;
+}
+
+.admin-card a,
+.admin-form button,
+.settings-card button{
+    display:inline-block;
+    background:#0B7A3B;
+    color:white;
+    padding:10px 18px;
+    border-radius:5px;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.admin-card a:hover,
+.admin-form button:hover,
+.settings-card button:hover{
+    background:#F4A300;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea,
+.settings-card input,
+.settings-card textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#0A2E5D;
+    color:white;
+}
+
+.status-active{
+    background:#0B7A3B;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+}
+
+.status-pending{
+    background:#F4A300;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+}
+
+.admin-profile{
+    background:#061f3d;
+    padding:15px;
+    border-radius:10px;
+    margin-top:25px;
+    font-size:14px;
+}
+
+@media(max-width:900px){
+    .admin-sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+
+    .admin-layout{
+        flex-direction:column;
+    }
+
+    .admin-main{
+        margin-left:0;
+        width:100%;
+    }
+
+    .dashboard-stats,
+    .admin-grid{
+        grid-template-columns:1fr;
+    }
+}

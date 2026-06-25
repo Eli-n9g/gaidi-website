@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Admin | GAIDI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/advanced.css">
+</head>
+
+<body onload="protectAdmin()">
+
+<div class="admin-layout">
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-logo">
+            <img src="images/logo.png" alt="GAIDI Logo">
+            <h2>GAIDI Admin</h2>
+            <p>Advanced Tools</p>
+        </div>
+
+        <a href="admin.html">Dashboard</a>
+        <a href="admin-news.html">News</a>
+        <a href="admin-gallery.html">Gallery</a>
+        <a href="admin-resources.html">Resources</a>
+        <a href="admin-members.html">Members</a>
+        <a href="admin-volunteers.html">Volunteers</a>
+        <a href="admin-settings.html">Settings</a>
+        <a href="admin-advanced.html">Advanced</a>
+        <a href="index.html">View Website</a>
+
+        <div class="admin-profile">
+            <strong>Administrator</strong>
+            <p>GAIDI Secretariat</p>
+            <p>Status: Active</p>
+        </div>
+
+    </aside>
+
+    <main class="admin-main">
+
+        <div class="admin-topbar">
+            <h1>Advanced Management Centre</h1>
+            <button class="logout-btn" onclick="logoutAdmin()">Logout</button>
+        </div>
+
+        <div class="admin-advanced-wrapper">
+
+            <div class="dashboard-stats">
+
+                <div class="stat-card">
+                    <h3 id="donations">0</h3>
+                    <p>Donation Records</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="totalRaised">UGX 0</h3>
+                    <p>Total Confirmed Raised</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>4</h3>
+                    <p>Core Program Pillars</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Live</h3>
+                    <p>Google Sheets System</p>
+                </div>
+
+            </div>
+
+            <div class="admin-advanced-card">
+                <h2>Advanced Modules</h2>
+                <p>
+                    This section prepares GAIDI for donor tracking, fundraising campaigns,
+                    impact storytelling, internship management, volunteer management and future digital certificates.
+                </p>
+            </div>
+
+            <div class="admin-grid">
+
+                <div class="admin-card">
+                    <h3>Donor Wall</h3>
+                    <p>Show public supporters who agree to recognition.</p>
+                    <a href="donor-wall.html">Open Module</a>
+                </div>
+
+                <div class="admin-card">
+                    <h3>Success Stories</h3>
+                    <p>Display community transformation stories.</p>
+                    <a href="success-stories.html">Open Module</a>
+                </div>
+
+                <div class="admin-card">
+                    <h3>Impact Map</h3>
+                    <p>Show GAIDI priority areas and expansion regions.</p>
+                    <a href="impact-map.html">Open Module</a>
+                </div>
+
+                <div class="admin-card">
+                    <h3>Reports Library</h3>
+                    <p>Strengthen accountability and donor confidence.</p>
+                    <a href="resources.html">Open Resources</a>
+                </div>
+
+                <div class="admin-card">
+                    <h3>Donation Tracking</h3>
+                    <p>Track pledges, confirmed support and contribution records.</p>
+                    <a href="donate.html">Open Donate Page</a>
+                </div>
+
+                <div class="admin-card">
+                    <h3>Future Certificates</h3>
+                    <p>Prepare for volunteer, intern and donor certificates.</p>
+                    <a href="#">Coming Soon</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script>
+fetch("https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P__BLKthGKGatx4methTzlhv4Ya6wbD5rB_Yjzxw-PhQ8osCzPDYQ/exec")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("donations").innerHTML = data.donations || 0;
+    document.getElementById("totalRaised").innerHTML = "UGX " + Number(data.totalRaised || 0).toLocaleString();
+})
+.catch(error => {
+    console.log("Advanced dashboard error:", error);
+});
+</script>
+
+<script src="js/admin.js"></script>
+<script src="js/layout.js"></script>
+
+</body>
+</html>

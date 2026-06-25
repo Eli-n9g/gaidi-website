@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<link rel="icon" type="image/png" href="favicon/favicon.png">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Impact Map | GAIDI</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/advanced.css">
+
+<style>
+
+.country-map{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+
+margin-top:40px;
+
+}
+
+.region-card{
+
+background:white;
+
+padding:25px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.region-card:hover{
+
+transform:translateY(-8px);
+
+background:#0A2E5D;
+
+color:white;
+
+}
+
+.statistics-box{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+margin-top:40px;
+
+}
+
+.statistics-box .stat{
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 4px 15px rgba(0,0,0,.15);
+
+}
+
+.statistics-box h2{
+
+color:#0A2E5D;
+
+font-size:38px;
+
+margin-bottom:10px;
+
+}
+
+#mapOutput{
+
+margin-top:40px;
+
+background:#fff;
+
+padding:35px;
+
+border-left:8px solid #0B7A3B;
+
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+border-radius:10px;
+
+}
+
+.timeline{
+
+margin-top:50px;
+
+}
+
+.timeline-item{
+
+padding:20px;
+
+border-left:5px solid #0B7A3B;
+
+margin-bottom:25px;
+
+background:white;
+
+box-shadow:0 3px 10px rgba(0,0,0,.12);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-container">
+
+<img src="images/logo.png">
+
+<div class="logo-text">
+
+<h1>GAIDI</h1>
+
+<p>Global All Integrated Development Initiative</p>
+
+</div>
+
+</div>
+
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+<nav id="navMenu">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="programs.html">Programs</a>
+
+<a href="volunteer.html">Volunteer</a>
+
+<a href="internship.html">Internship</a>
+
+<a href="donate.html">Donate</a>
+
+<a href="impact-map.html">Impact Map</a>
+
+<a href="resources.html">Resources</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="advanced-hero">
+
+<h1>GAIDI Impact Map</h1>
+
+<p>
+
+Monitoring where we work today and where we aspire to transform lives tomorrow.
+
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>Current & Future Areas of Operation</h2>
+
+<p>
+
+GAIDI currently operates from Gulu City while progressively expanding partnerships and programmes across Uganda and beyond.
+
+</p>
+
+<div class="country-map">
+
+<div class="region-card"
+
+onclick="showImpactArea('gulu')">
+
+<h3>📍 Gulu City</h3>
+
+<p>Current Headquarters</p>
+
+</div>
+
+<div class="region-card"
+
+onclick="showImpactArea('lamwo')">
+
+<h3>📍 Lamwo</h3>
+
+<p>Community Engagement</p>
+
+</div>
+
+<div class="region-card"
+
+onclick="showImpactArea('acholi')">
+
+<h3>📍 Acholi Sub-region</h3>
+
+<p>Expansion Zone</p>
+
+</div>
+
+<div class="region-card"
+
+onclick="showImpactArea('uganda')">
+
+<h3>🇺🇬 Uganda</h3>
+
+<p>National Vision</p>
+
+</div>
+
+</div>
+
+<div id="mapOutput">
+
+Click any region above to explore GAIDI's current work and future ambitions.
+
+</div>
+
+</section>
+
+<section class="section grey">
+
+<h2>Impact Statistics</h2>
+
+<div class="statistics-box">
+
+<div class="stat">
+
+<h2 id="beneficiaries">0</h2>
+
+<p>Registered Beneficiaries</p>
+
+</div>
+
+<div class="stat">
+
+<h2 id="volunteers">0</h2>
+
+<p>Volunteers</p>
+
+</div>
+
+<div class="stat">
+
+<h2 id="interns">0</h2>
+
+<p>Interns</p>
+
+</div>
+
+<div class="stat">
+
+<h2 id="members">0</h2>
+
+<p>Members</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Growth Timeline</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>2022</h3>
+
+<p>
+
+GAIDI was founded with a vision of empowering communities through integrated development.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>2026</h3>
+
+<p>
+
+Digital transformation begins through the launch of the GAIDI Management Information System and online engagement platform.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>2030 Vision</h3>
+
+<p>
+
+Operate in multiple districts across Uganda while building strategic partnerships throughout Africa.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section call-to-action">
+
+<h2>Help Expand Our Impact</h2>
+
+<p>
+
+Together we can reach more communities, empower more lives and build lasting change.
+
+</p>
+
+<a href="donate.html" class="btn">
+
+Support Our Mission
+
+</a>
+
+</section>
+
+<footer class="main-footer">
+
+<div class="footer-container">
+
+<div class="footer-column">
+
+<h3>GAIDI</h3>
+
+<p>
+
+Empowering Communities for a Brighter Future.
+
+</p>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+
+<a href="donate.html">Donate</a>
+
+<a href="volunteer.html">Volunteer</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Connect</h3>
+
+<div class="footer-socials"
+
+id="footerSocials">
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+<a href="https://wa.me/256779481284"
+
+class="whatsapp-float"
+
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<div class="chatbot-container"
+
+id="chatbot">
+
+</div>
+
+<button class="chatbot-toggle"
+
+onclick="toggleChatbot()">
+
+<i class="fas fa-robot"></i>
+
+</button>
+
+<script src="js/script.js"></script>
+
+<script src="js/layout.js"></script>
+
+<script>
+
+insertGAIDISocials("footerSocials");
+
+fetch("https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P__BLKthGKGatx4methTzlhv4Ya6wbD5rB_Yjzxw-PhQ8osCzPDYQ/exec")
+
+.then(r=>r.json())
+
+.then(data=>{
+
+document.getElementById("volunteers").innerHTML=data.volunteers;
+
+document.getElementById("interns").innerHTML=data.interns;
+
+document.getElementById("members").innerHTML=data.members;
+
+document.getElementById("beneficiaries").innerHTML=
+
+data.members+
+
+data.volunteers+
+
+data.interns;
+
+});
+
+</script>
+
+</body>
+
+</html>
