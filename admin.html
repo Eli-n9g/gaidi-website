@@ -61,31 +61,33 @@ Admin Dashboard
 
         <section class="admin-section">
 
-            <div class="dashboard-stats">
+    <h2>Live Application Statistics</h2>
 
-                <div class="stat-card">
-                    <h3>4</h3>
-                    <p>Program Pillars</p>
-                </div>
+    <div class="dashboard-stats">
 
-                <div class="stat-card">
-                    <h3>8+</h3>
-                    <p>Beneficiary Groups</p>
-                </div>
+        <div class="stat-card">
+            <h3 id="contacts">0</h3>
+            <p>Contact Messages</p>
+        </div>
 
-                <div class="stat-card">
-                    <h3>4+</h3>
-                    <p>Downloads</p>
-                </div>
+        <div class="stat-card">
+            <h3 id="volunteers">0</h3>
+            <p>Volunteer Applications</p>
+        </div>
 
-                <div class="stat-card">
-                    <h3>14+</h3>
-                    <p>Website Pages</p>
-                </div>
+        <div class="stat-card">
+            <h3 id="members">0</h3>
+            <p>Membership Applications</p>
+        </div>
 
-            </div>
+        <div class="stat-card">
+            <h3 id="interns">0</h3>
+            <p>Internship Applications</p>
+        </div>
 
-        </section>
+    </div>
+
+</section>
 
         <section class="admin-section">
 
@@ -179,7 +181,19 @@ Admin Dashboard
     </main>
 
 </div>
-
+<script>
+fetch("https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P__BLKthGKGatx4methTzlhv4Ya6wbD5rB_Yjzxw-PhQ8osCzPDYQ/exec")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("contacts").innerHTML = data.contacts;
+    document.getElementById("volunteers").innerHTML = data.volunteers;
+    document.getElementById("members").innerHTML = data.members;
+    document.getElementById("interns").innerHTML = data.interns;
+})
+.catch(error => {
+    console.log("Dashboard statistics error:", error);
+});
+</script>
 <script src="js/admin.js"></script>
 
 </body>
