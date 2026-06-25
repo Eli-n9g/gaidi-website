@@ -1,0 +1,144 @@
+/* GAIDI ADVANCED FEATURES */
+
+.advanced-hero{
+    background:linear-gradient(rgba(10,46,93,0.88),rgba(10,46,93,0.88)),url('../images/hero.jpg');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    padding:90px 7%;
+    text-align:center;
+}
+
+.advanced-hero h1{
+    font-size:44px;
+    margin-bottom:15px;
+}
+
+.advanced-hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:18px;
+}
+
+.advanced-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    padding:40px 7%;
+}
+
+.advanced-card{
+    background:white;
+    padding:28px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+    border-top:6px solid #0B7A3B;
+}
+
+.advanced-card h3{
+    color:#0A2E5D;
+    margin-bottom:10px;
+}
+
+.progress-box{
+    background:white;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+}
+
+.progress-bar{
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    height:22px;
+    margin:15px 0;
+}
+
+.progress-fill{
+    background:#0B7A3B;
+    height:100%;
+    color:white;
+    text-align:center;
+    font-size:13px;
+    line-height:22px;
+}
+
+.donor-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+}
+
+.donor-table th{
+    background:#0A2E5D;
+    color:white;
+    padding:13px;
+}
+
+.donor-table td{
+    padding:13px;
+    border:1px solid #ddd;
+}
+
+.map-box{
+    background:white;
+    padding:35px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+    text-align:center;
+}
+
+.map-region{
+    display:inline-block;
+    background:#0B7A3B;
+    color:white;
+    padding:12px 20px;
+    margin:8px;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+.map-region:hover{
+    background:#F4A300;
+}
+
+.story-card{
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+}
+
+.story-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.story-card div{
+    padding:22px;
+}
+
+.story-card h3{
+    color:#0A2E5D;
+}
+
+.admin-advanced-wrapper{
+    padding:40px 7%;
+}
+
+.admin-advanced-card{
+    background:white;
+    padding:30px;
+    margin-bottom:25px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+}
+
+@media(max-width:700px){
+    .advanced-hero h1{
+        font-size:32px;
+    }
+}
