@@ -2,150 +2,74 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<head>
-
-<link rel="icon" type="image/png" href="favicon/favicon.png">
-
-<meta charset="UTF-8">
-
-<title>GAIDI Uganda</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-</head>
-	<head>
-
-<link rel="icon" type="image/png" href="favicon/favicon.png">
-
-<meta charset="UTF-8">
-
-<title>GAIDI Uganda</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-</head>
     <title>News & Updates | GAIDI</title>
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/advanced.css">
 </head>
 
 <body>
 
-<button class="menu-toggle" onclick="toggleMenu()">
-    ☰
-</button>
+<header>
+    <div class="logo-container">
+        <img src="images/logo.png" alt="GAIDI Logo">
+        <div class="logo-text">
+            <h1>GAIDI</h1>
+            <p>Global All Integrated Development Initiative</p>
+        </div>
+    </div>
 
-<nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="founders.html">Founders</a>
-    <a href="governance.html">Governance</a>
-    <a href="programs.html">Programs</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="beneficiaries.html">Beneficiaries</a>
-    <a href="partners.html">Partnerships</a>
-    <a href="news.html">News</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="impact.html">Impact</a>
-    <a href="resources.html">Resources</a>
-    <a href="membership.html">Membership</a>
-	<a href="internship.html">Internship</a>
-	<a href="donate.html">Donate</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="founders.html">Founders</a>
+        <a href="governance.html">Governance</a>
+        <a href="programs.html">Programs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="beneficiaries.html">Beneficiaries</a>
+        <a href="partners.html">Partnerships</a>
+        <a href="news.html">News</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="internship.html">Internship</a>
+        <a href="donate.html">Donate</a>
+        <a href="impact.html">Impact</a>
+        <a href="resources.html">Resources</a>
+        <a href="membership.html">Membership</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
 <section class="page-hero">
     <h2>News & Updates</h2>
-    <p>Latest updates, announcements, activities and opportunities from GAIDI.</p>
+    <p>Follow GAIDI’s latest announcements, stories, activities and institutional updates.</p>
 </section>
 
 <section class="section">
-    <h2>Latest Updates</h2>
+    <h2>Latest News</h2>
     <p>
-        This page will share GAIDI’s latest activities, community stories,
-        partnership announcements, project updates, training opportunities
-        and institutional milestones.
+        This page displays published updates from the GAIDI News Content Management System.
     </p>
-</section>
 
-<section class="news-grid">
-
-    <div class="news-card">
-        <img src="images/news1.jpg" alt="GAIDI Relaunch">
-        <div class="news-content">
-            <span>Institutional Update</span>
-            <h3>GAIDI Begins Revitalization Process</h3>
-            <p>
-                GAIDI is undertaking a strategic revitalization process to strengthen
-                governance, partnerships, programs and community impact.
-            </p>
-            <a href="#">Read More</a>
-        </div>
-    </div>
-
-    <div class="news-card">
-        <img src="images/news2.jpg" alt="Disability Inclusion">
-        <div class="news-content">
-            <span>Disability Inclusion</span>
-            <h3>Disability Inclusion Becomes a Core Pillar</h3>
-            <p>
-                GAIDI has adopted Disability Inclusion and Empowerment as a major
-                programmatic pillar focusing on rights, accessibility and participation.
-            </p>
-            <a href="#">Read More</a>
-        </div>
-    </div>
-
-    <div class="news-card">
-        <img src="images/news3.jpg" alt="Partnerships">
-        <div class="news-content">
-            <span>Partnerships</span>
-            <h3>Call for Partnerships and Collaboration</h3>
-            <p>
-                GAIDI welcomes development partners, institutions, researchers,
-                volunteers and donors to collaborate for sustainable community impact.
-            </p>
-            <a href="partners.html">Partner With Us</a>
-        </div>
-    </div>
-
-</section>
-
-<section class="section grey">
-    <h2>Future Updates Will Include</h2>
-
-    <div class="info-grid">
-        <div class="info-box">
-            <h3>Community Projects</h3>
-            <p>Updates from health, livelihoods, education and disability inclusion activities.</p>
-        </div>
-
-        <div class="info-box">
-            <h3>Training Events</h3>
-            <p>Announcements on workshops, sign language training and capacity building.</p>
-        </div>
-
-        <div class="info-box">
-            <h3>Research Outputs</h3>
-            <p>Reports, policy briefs, publications and evidence-based learning products.</p>
-        </div>
-
-        <div class="info-box">
-            <h3>Opportunities</h3>
-            <p>Volunteer calls, partnership opportunities, internship placements and funding updates.</p>
+    <div class="advanced-grid" id="newsContainer">
+        <div class="advanced-card">
+            <h3>Loading news...</h3>
+            <p>Please wait while GAIDI updates are loaded.</p>
         </div>
     </div>
 </section>
 
 <section class="section call-to-action">
     <h2>Stay Connected With GAIDI</h2>
-    <p>
-        Follow our updates and join us in building inclusive, resilient and empowered communities.
-    </p>
-    <a href="contact.html" class="btn">Contact GAIDI</a>
+    <p>Partner with us, volunteer, donate or follow our work as we empower communities for a brighter future.</p>
+    <a href="contact.html" class="btn">Contact Us</a>
+    <a href="donate.html" class="btn">Support GAIDI</a>
 </section>
 
 <footer class="main-footer">
@@ -165,16 +89,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="programs.html">Programs</a>
-            <a href="governance.html">Governance</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="internship.html">Internship</a>
+            <a href="donate.html">Donate</a>
+            <a href="resources.html">Resources</a>
             <a href="contact.html">Contact</a>
         </div>
 
         <div class="footer-column">
-            <h3>Programs</h3>
-            <a href="programs.html">Health & Wellbeing</a>
-            <a href="programs.html">Livelihoods</a>
-            <a href="programs.html">Education & Research</a>
-            <a href="programs.html">Disability Inclusion</a>
+            <h3>Get Involved</h3>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="membership.html">Membership</a>
+            <a href="internship.html">Internship</a>
+            <a href="partners.html">Partnerships</a>
         </div>
 
         <div class="footer-column">
@@ -184,25 +111,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             <p>+256 773 028 180</p>
             <p>info@gaidiuganda.org</p>
 
-            <div class="footer-socials">
-
-    <a href="#">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-
-    <a href="https://www.linkedin.com/company/global-all-integrated-development-initiative-gaidi/" target="_blank">
-    <i class="fab fa-linkedin"></i> LinkedIn
-</a>
-
-    <a href="https://wa.me/256775602027">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <a href="mailto:info@gaidiuganda.org">
-        <i class="fas fa-envelope"></i>
-    </a>
-
-</div>
+            <div class="footer-socials" id="footerSocials"></div>
         </div>
 
     </div>
@@ -213,28 +122,26 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 </footer>
 
-<a href="https://wa.me/256779481284" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/256775602027" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
-<script src="js/script.js"></script>
+<a href="https://www.linkedin.com/company/global-all-integrated-development-initiative-gaidi/" target="_blank">
+    <i class="fab fa-linkedin"></i> LinkedIn
+</a>
+
 <div class="chatbot-container" id="chatbot">
     <div class="chatbot-header">
         <span>GAIDI Assistant</span>
         <button onclick="toggleChatbot()">×</button>
     </div>
 
-    <div class="chatbot-messages" id="chatMessages">
-        <div class="bot-message">
-            Hello 👋 I am GAIDI Assistant. How can I help you today?
-        </div>
-    </div>
+    <div class="chatbot-messages" id="chatMessages"></div>
 
     <div class="chatbot-options">
-        <button onclick="quickReply('What is GAIDI?')">What is GAIDI?</button>
         <button onclick="quickReply('Programs')">Programs</button>
         <button onclick="quickReply('Volunteer')">Volunteer</button>
-        <button onclick="quickReply('Membership')">Membership</button>
-        <button onclick="quickReply('Partnerships')">Partnerships</button>
+        <button onclick="quickReply('Internship')">Internship</button>
+        <button onclick="quickReply('Donate')">Donate</button>
         <button onclick="quickReply('Contact')">Contact</button>
     </div>
 
@@ -247,5 +154,64 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <button class="chatbot-toggle" onclick="toggleChatbot()">
     <i class="fas fa-robot"></i>
 </button>
+
+<script src="js/script.js"></script>
+<script src="js/layout.js"></script>
+
+<script>
+insertGAIDISocials("footerSocials");
+
+const appURL = "https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P__BLKthGKGatx4methTzlhv4Ya6wbD5rB_Yjzxw-PhQ8osCzPDYQ/exec";
+
+fetch(appURL)
+.then(response => response.json())
+.then(data => {
+    const newsContainer = document.getElementById("newsContainer");
+    const news = data.news || [];
+
+    if(news.length === 0){
+        newsContainer.innerHTML = `
+            <div class="advanced-card">
+                <h3>No published news yet</h3>
+                <p>Published GAIDI updates will appear here once added through the admin CMS.</p>
+            </div>
+        `;
+        return;
+    }
+
+    let html = "";
+
+    news.reverse().forEach(function(item){
+        let imagePath = item.image || "images/news1.jpg";
+
+        html += `
+            <div class="story-card">
+                <img src="${imagePath}" alt="${item.title}">
+                <div>
+                    <h3>${item.title}</h3>
+                    <p><strong>${item.category}</strong> | ${item.date}</p>
+                    <p>${item.summary}</p>
+                    <details>
+                        <summary>Read Full Story</summary>
+                        <p>${item.fullStory}</p>
+                    </details>
+                </div>
+            </div>
+        `;
+    });
+
+    newsContainer.innerHTML = html;
+})
+.catch(error => {
+    document.getElementById("newsContainer").innerHTML = `
+        <div class="advanced-card">
+            <h3>Unable to load news</h3>
+            <p>Please try again later.</p>
+        </div>
+    `;
+    console.log("News loading error:", error);
+});
+</script>
+
 </body>
 </html>
