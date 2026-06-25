@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | GAIDI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="images/logo.png" alt="GAIDI Logo">
+        <div class="logo-text">
+            <h1>GAIDI</h1>
+            <p>Global All Integrated Development Initiative</p>
+        </div>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="founders.html">Founders</a>
+        <a href="governance.html">Governance</a>
+        <a href="programs.html">Programs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="beneficiaries.html">Beneficiaries</a>
+        <a href="partners.html">Partnerships</a>
+        <a href="news.html">News</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="internship.html">Internship</a>
+        <a href="donate.html">Donate</a>
+        <a href="impact.html">Impact</a>
+        <a href="resources.html">Resources</a>
+        <a href="membership.html">Membership</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h2>Support GAIDI</h2>
+    <p>Your contribution helps empower communities through health, education, livelihoods, research and disability inclusion.</p>
+</section>
+
+<section class="section">
+
+    <h2>Why Donate?</h2>
+
+    <p>
+        Your support enables GAIDI to reach vulnerable communities, strengthen inclusive development programs,
+        support persons with disabilities, promote health and wellbeing, empower youth, and advance community-based solutions.
+    </p>
+
+    <div class="info-grid">
+
+        <div class="info-box">
+            <h3>Health</h3>
+            <p>Support health education, outreach, WASH, nutrition and wellbeing programs.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Education</h3>
+            <p>Support mentorship, digital literacy, research and learning initiatives.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Livelihoods</h3>
+            <p>Support agriculture, entrepreneurship, vocational skills and household resilience.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Disability Inclusion</h3>
+            <p>Support sign language promotion, accessibility, advocacy and empowerment.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section grey">
+
+    <h2>Donation Options</h2>
+
+    <div class="pillars">
+
+        <div class="pillar">
+            <h3>Mobile Money</h3>
+            <p><strong>MTN/Airtel:</strong> +256 779 481 284</p>
+            <p>Name: GAIDI / Felix Eling</p>
+        </div>
+
+        <div class="pillar">
+            <h3>In-Kind Support</h3>
+            <p>Support with computers, training materials, assistive devices, office items, books or community supplies.</p>
+        </div>
+
+        <div class="pillar">
+            <h3>Sponsor a Program</h3>
+            <p>Support a specific program area such as health, education, livelihoods or disability inclusion.</p>
+        </div>
+
+        <div class="pillar">
+            <h3>Monthly Support</h3>
+            <p>Become a recurring supporter and help sustain GAIDI’s long-term community impact.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="volunteer-form-section">
+
+    <h2>Donation Pledge Form</h2>
+
+    <p>
+        Fill in this form after donating or pledging support. GAIDI will verify and acknowledge your contribution.
+    </p>
+
+    <form class="volunteer-form" action="https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P__BLKthGKGatx4methTzlhv4Ya6wbD5rB_Yjzxw-PhQ8osCzPDYQ/exec" method="POST">
+
+        <input type="hidden" name="formType" value="donation">
+
+        <input type="text" name="fullName" placeholder="Full Name / Organization Name" required>
+
+        <input type="email" name="email" placeholder="Email Address" required>
+
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <select name="donationType" required>
+            <option value="">Select Donation Type</option>
+            <option>Cash Donation</option>
+            <option>In-Kind Donation</option>
+            <option>Monthly Support</option>
+            <option>Program Sponsorship</option>
+            <option>Partnership Support</option>
+        </select>
+
+        <input type="number" name="amount" placeholder="Amount Pledged / Donated" required>
+
+        <select name="currency" required>
+            <option value="">Select Currency</option>
+            <option>UGX</option>
+            <option>USD</option>
+            <option>EUR</option>
+            <option>GBP</option>
+        </select>
+
+        <select name="paymentMethod" required>
+            <option value="">Select Payment Method</option>
+            <option>MTN Mobile Money</option>
+            <option>Airtel Money</option>
+            <option>Bank Transfer</option>
+            <option>Cash</option>
+            <option>In-Kind Support</option>
+        </select>
+
+        <select name="programArea" required>
+            <option value="">Select Program Area</option>
+            <option>General Support</option>
+            <option>Health & Wellbeing</option>
+            <option>Education, Innovation & Research</option>
+            <option>Livelihoods & Economic Empowerment</option>
+            <option>Disability Inclusion & Empowerment</option>
+        </select>
+
+        <select name="publicRecognition" required>
+            <option value="">Public Recognition Preference</option>
+            <option>Yes, you may recognize me publicly</option>
+            <option>No, keep my donation anonymous</option>
+        </select>
+
+        <textarea name="message" rows="6" placeholder="Message / Transaction reference / Description of in-kind support"></textarea>
+
+        <button type="submit">Submit Donation Record</button>
+
+    </form>
+
+</section>
+
+<section class="section call-to-action">
+    <h2>Every Contribution Counts</h2>
+    <p>Your support helps transform lives and strengthen communities.</p>
+    <a href="contact.html" class="btn">Contact GAIDI</a>
+</section>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>GAIDI</h3>
+            <p>Global All Integrated Development Initiative is committed to empowering communities through health, livelihoods, education, research and disability inclusion.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programs.html">Programs</a>
+            <a href="donate.html">Donate</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Programs</h3>
+            <a href="programs.html">Health & Wellbeing</a>
+            <a href="programs.html">Livelihoods</a>
+            <a href="programs.html">Education & Research</a>
+            <a href="programs.html">Disability Inclusion</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Gulu City, Uganda</p>
+            <p>+256 779 481 284</p>
+            <p>+256 773 028 180</p>
+            <p>info@gaidiuganda.org</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Global All Integrated Development Initiative (GAIDI). All Rights Reserved.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/256775602027" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

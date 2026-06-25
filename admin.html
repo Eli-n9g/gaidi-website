@@ -86,7 +86,15 @@ Admin Dashboard
         </div>
 
     </div>
+<div class="stat-card">
+    <h3 id="donations">0</h3>
+    <p>Donation Records</p>
+</div>
 
+<div class="stat-card">
+    <h3 id="totalRaised">0</h3>
+    <p>Total Confirmed Raised</p>
+</div>
 </section>
 
         <section class="admin-section">
@@ -189,6 +197,8 @@ fetch("https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P__BLKthGKGatx4me
     document.getElementById("volunteers").innerHTML = data.volunteers;
     document.getElementById("members").innerHTML = data.members;
     document.getElementById("interns").innerHTML = data.interns;
+	document.getElementById("donations").innerHTML = data.donations;
+document.getElementById("totalRaised").innerHTML = "UGX " + Number(data.totalRaised).toLocaleString();
 })
 .catch(error => {
     console.log("Dashboard statistics error:", error);
