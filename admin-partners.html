@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners CMS | GAIDI Admin</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/advanced.css">
+</head>
+
+<body onload="protectAdmin()">
+
+<div class="admin-layout">
+
+    <aside class="admin-sidebar">
+        <div class="admin-logo">
+            <img src="images/logo.png" alt="GAIDI Logo">
+            <h2>GAIDI Admin</h2>
+            <p>Partners CMS</p>
+        </div>
+
+        <a href="admin.html">Dashboard</a>
+        <a href="admin-cms-news.html">CMS News</a>
+        <a href="admin-partners.html">Partners CMS</a>
+        <a href="admin-advanced.html">Advanced Tools</a>
+        <a href="index.html">View Website</a>
+
+        <div class="admin-profile">
+            <strong>Administrator</strong>
+            <p>GAIDI Secretariat</p>
+            <p>Status: Active</p>
+        </div>
+    </aside>
+
+    <main class="admin-main">
+
+        <div class="admin-topbar">
+            <h1>Partner Management</h1>
+            <button class="logout-btn" onclick="logoutAdmin()">Logout</button>
+        </div>
+
+        <section class="admin-section">
+            <h2>Add Partner</h2>
+
+            <div class="admin-form">
+                <form action="https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P__BLKthGKGatx4methTzlhv4Ya6wbD5rB_Yjzxw-PhQ8osCzPDYQ/exec" method="POST">
+
+                    <input type="hidden" name="formType" value="cms_partner">
+
+                    <input type="text" name="partnerName" placeholder="Partner Name" required>
+
+                    <input type="text" name="logo" placeholder="Logo path e.g. images/sosai-logo.png" required>
+
+                    <input type="url" name="website" placeholder="Website URL e.g. https://sosainitiative.org/" required>
+
+                    <select name="category" required>
+                        <option value="">Select Category</option>
+                        <option>Strategic Partner</option>
+                        <option>Disability Inclusion Partner</option>
+                        <option>Health Partner</option>
+                        <option>Education Partner</option>
+                        <option>Research Partner</option>
+                        <option>Livelihood Partner</option>
+                        <option>Funding Partner</option>
+                        <option>Technical Partner</option>
+                    </select>
+
+                    <input type="text" name="country" placeholder="Country e.g. Uganda" required>
+
+                    <textarea name="description" rows="6" placeholder="Brief partner description" required></textarea>
+
+                    <button type="submit">Publish Partner</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="admin-section">
+            <h2>Logo Guide</h2>
+            <div class="admin-table-box">
+                <p>For local logos, upload the logo inside the <strong>images</strong> folder and enter:</p>
+                <p><strong>images/sosai-logo.png</strong></p>
+                <p>The name must match exactly, including capital letters and file extension.</p>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

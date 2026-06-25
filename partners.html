@@ -2,256 +2,276 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<head>
-
-<link rel="icon" type="image/png" href="favicon/favicon.png">
-
-<meta charset="UTF-8">
-
-<title>GAIDI Uganda</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-</head>
     <title>Partnerships | GAIDI</title>
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/advanced.css">
+
+    <style>
+        .partners-marquee-section{
+            padding:60px 7%;
+            background:#f4f6f9;
+            overflow:hidden;
+        }
+
+        .partners-marquee-box{
+            background:white;
+            border-radius:18px;
+            box-shadow:0 5px 18px rgba(0,0,0,0.12);
+            padding:25px;
+            overflow:hidden;
+        }
+
+        .partners-marquee{
+            display:flex;
+            gap:35px;
+            width:max-content;
+            animation:scrollPartners 30s linear infinite;
+        }
+
+        .partner-card{
+            min-width:330px;
+            background:white;
+            border:1px solid #ddd;
+            border-radius:15px;
+            padding:22px;
+            display:flex;
+            align-items:center;
+            gap:18px;
+            box-shadow:0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .partner-card img{
+            width:90px;
+            height:90px;
+            object-fit:contain;
+        }
+
+        .partner-card h3{
+            color:#0A2E5D;
+            margin-bottom:6px;
+        }
+
+        .partner-card a{
+            color:#0B7A3B;
+            font-weight:bold;
+            text-decoration:none;
+        }
+
+        @keyframes scrollPartners{
+            0%{ transform:translateX(100%); }
+            100%{ transform:translateX(-100%); }
+        }
+
+        .partners-marquee-box:hover .partners-marquee{
+            animation-play-state:paused;
+        }
+    </style>
 </head>
 
 <body>
 
-<button class="menu-toggle" onclick="toggleMenu()">
-    ☰
-</button>
+<header>
+    <div class="logo-container">
+        <img src="images/logo.png" alt="GAIDI Logo">
+        <div class="logo-text">
+            <h1>GAIDI</h1>
+            <p>Global All Integrated Development Initiative</p>
+        </div>
+    </div>
 
-<nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="founders.html">Founders</a>
-    <a href="governance.html">Governance</a>
-    <a href="programs.html">Programs</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="beneficiaries.html">Beneficiaries</a>
-    <a href="partners.html">Partnerships</a>
-    <a href="news.html">News</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="impact.html">Impact</a>
-    <a href="resources.html">Resources</a>
-    <a href="membership.html">Membership</a>
-	<a href="internship.html">Internship</a>
-	<a href="donate.html">Donate</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="founders.html">Founders</a>
+        <a href="governance.html">Governance</a>
+        <a href="programs.html">Programs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="beneficiaries.html">Beneficiaries</a>
+        <a href="partners.html">Partnerships</a>
+        <a href="news.html">News</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="internship.html">Internship</a>
+        <a href="donate.html">Donate</a>
+        <a href="impact.html">Impact</a>
+        <a href="resources.html">Resources</a>
+        <a href="membership.html">Membership</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
 <section class="page-hero">
-    <h2>Partnerships & Support</h2>
-    <p>Collaborating for inclusive, sustainable and community-driven development.</p>
+    <h2>Partnerships</h2>
+    <p>Building strategic collaborations for inclusive and sustainable community development.</p>
 </section>
 
 <section class="section">
-    <h2>Why Partner With GAIDI?</h2>
+    <h2>Our Partnership Philosophy</h2>
     <p>
-        GAIDI welcomes partnerships with individuals, institutions, development partners,
-        private sector actors, academic institutions and community structures that share
-        our commitment to inclusive and sustainable development.
+        GAIDI believes that sustainable development is best achieved through collaboration.
+        We work with organizations, institutions, donors, civil society actors and community
+        structures that share our commitment to health, education, livelihoods, research,
+        disability inclusion and community empowerment.
     </p>
-
-    <p>
-        Our governance framework emphasizes accountability, transparency, safeguarding,
-        disability inclusion, community participation and evidence-based programming.
-    </p>
-</section>
-
-<section class="partner-grid">
-
-    <div class="partner-card">
-        <h3>💰 Financial Support</h3>
-        <p>
-            Support community projects through grants, donations, sponsorships,
-            fundraising support and program financing.
-        </p>
-    </div>
-
-    <div class="partner-card">
-        <h3>🧠 Technical Support</h3>
-        <p>
-            Provide expertise in public health, agriculture, education, disability
-            inclusion, research, governance, technology and organizational development.
-        </p>
-    </div>
-
-    <div class="partner-card">
-        <h3>🤝 Strategic Partnerships</h3>
-        <p>
-            Collaborate with GAIDI on projects, advocacy initiatives, training programs,
-            research, community outreach and institutional strengthening.
-        </p>
-    </div>
-
-    <div class="partner-card">
-        <h3>🎓 Research Collaboration</h3>
-        <p>
-            Partner with us on community-based research, innovation, evidence generation,
-            policy briefs, publications and learning initiatives.
-        </p>
-    </div>
-
-    <div class="partner-card">
-        <h3>🙋 Volunteer Engagement</h3>
-        <p>
-            Contribute your skills, time and experience to support vulnerable communities
-            through volunteer service and professional mentorship.
-        </p>
-    </div>
-
-    <div class="partner-card">
-        <h3>🏢 Corporate Social Responsibility</h3>
-        <p>
-            Work with GAIDI through CSR initiatives that promote health, education,
-            livelihoods, disability inclusion and community resilience.
-        </p>
-    </div>
-
-</section>
-
-<section class="section grey">
-    <h2>Potential Partner Categories</h2>
 
     <div class="info-grid">
         <div class="info-box">
-            <h3>Government</h3>
-            <p>Local governments, ministries and public institutions.</p>
+            <h3>Joint Programming</h3>
+            <p>Designing and implementing community-focused initiatives with shared impact goals.</p>
         </div>
 
         <div class="info-box">
-            <h3>NGOs & CSOs</h3>
-            <p>Local, national and international civil society organizations.</p>
+            <h3>Technical Collaboration</h3>
+            <p>Sharing expertise, training, research, innovation and institutional learning.</p>
         </div>
 
         <div class="info-box">
-            <h3>Academia</h3>
-            <p>Schools, universities, researchers and training institutions.</p>
+            <h3>Resource Mobilization</h3>
+            <p>Working together to mobilize funds, materials and technical support.</p>
         </div>
 
         <div class="info-box">
-            <h3>Private Sector</h3>
-            <p>Businesses, foundations and corporate social responsibility actors.</p>
+            <h3>Inclusive Development</h3>
+            <p>Advancing accessibility, disability rights, equity and community participation.</p>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <h2>Our Partnership Principles</h2>
-
-    <p>
-        All GAIDI partnerships are guided by mutual respect, transparency,
-        accountability, shared values, equity, ethical conduct and measurable impact.
+<section class="partners-marquee-section">
+    <h2 style="text-align:center; color:#0A2E5D;">Our Valued Partners</h2>
+    <p style="text-align:center; max-width:800px; margin:10px auto 35px;">
+        GAIDI recognizes partners who contribute to community transformation, inclusion and sustainable development.
     </p>
 
-    <p>
-        We value partners who respect community dignity, promote inclusion,
-        strengthen local ownership and support sustainable solutions.
-    </p>
+    <div class="partners-marquee-box">
+        <div class="partners-marquee" id="partnersMarquee">
+            <div class="partner-card">
+                <img src="images/sosai-logo.png" alt="SOSAI Logo">
+                <div>
+                    <h3>Sound of Silence Africa Initiative</h3>
+                    <p>Disability inclusion, accessibility, advocacy and community empowerment.</p>
+                    <a href="https://sosainitiative.org/" target="_blank" rel="noopener noreferrer">
+                        Visit Website <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section grey">
+    <h2>Featured Strategic Partner</h2>
+
+    <div class="info-grid">
+        <div class="info-box">
+            <img src="images/sosai-logo.png" alt="SOSAI Logo" style="width:130px; height:130px; object-fit:contain;">
+            <h3>Sound of Silence Africa Initiative</h3>
+            <p>
+                SOSAI is GAIDI’s strategic partner in disability inclusion, sign language promotion,
+                accessibility, advocacy, human rights and community empowerment.
+            </p>
+            <a href="https://sosainitiative.org/" class="btn" target="_blank" rel="noopener noreferrer">Visit SOSAI</a>
+        </div>
+
+        <div class="info-box">
+            <h3>Partnership Focus</h3>
+            <p>Disability inclusion, inclusive health services, accessibility, sign language and humanitarian support.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Shared Vision</h3>
+            <p>Creating communities where vulnerable groups and persons with disabilities participate meaningfully.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Future Collaboration</h3>
+            <p>Joint programs, advocacy, research, training, resource mobilization and community outreach.</p>
+        </div>
+    </div>
 </section>
 
 <section class="section call-to-action">
-    <h2>Let’s Build Stronger Communities Together</h2>
-    <p>
-        Partner with GAIDI to support vulnerable populations, strengthen livelihoods,
-        promote inclusion and create sustainable community impact.
-    </p>
-    <a href="contact.html" class="btn">Contact Us Today</a>
+    <h2>Partner With GAIDI</h2>
+    <p>We welcome organizations, institutions, donors and community actors interested in creating lasting impact.</p>
+    <a href="contact.html" class="btn">Contact Us</a>
+    <a href="donate.html" class="btn">Support GAIDI</a>
 </section>
 
 <footer class="main-footer">
-
     <div class="footer-container">
 
         <div class="footer-column">
             <h3>GAIDI</h3>
             <p>
-                Global All Integrated Development Initiative is committed to empowering
-                communities through health, livelihoods, education, research and disability inclusion.
+                Global All Integrated Development Initiative is committed to empowering communities
+                through health, livelihoods, education, research and disability inclusion.
             </p>
         </div>
 
         <div class="footer-column">
             <h3>Quick Links</h3>
             <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
             <a href="programs.html">Programs</a>
-            <a href="governance.html">Governance</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="internship.html">Internship</a>
+            <a href="donate.html">Donate</a>
             <a href="contact.html">Contact</a>
         </div>
 
         <div class="footer-column">
-            <h3>Programs</h3>
-            <a href="programs.html">Health & Wellbeing</a>
-            <a href="programs.html">Livelihoods</a>
-            <a href="programs.html">Education & Research</a>
-            <a href="programs.html">Disability Inclusion</a>
+            <h3>Get Involved</h3>
+            <a href="membership.html">Membership</a>
+            <a href="partners.html">Partnerships</a>
+            <a href="donor-wall.html">Donor Wall</a>
+            <a href="success-stories.html">Success Stories</a>
         </div>
 
         <div class="footer-column">
             <h3>Contact</h3>
             <p>Gulu City, Uganda</p>
             <p>+256 779 481 284</p>
-            <p>+256 773 028 180</p>
+            <p>+256 775 602 027</p>
             <p>info@gaidiuganda.org</p>
 
             <div class="footer-socials">
-
-    <a href="#">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-
-    <a href="https://www.linkedin.com/company/global-all-integrated-development-initiative-gaidi/" target="_blank">
-    <i class="fab fa-linkedin"></i> LinkedIn
-</a>
-    <a href="https://wa.me/256779481284">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <a href="mailto:info@gaidiuganda.org">
-        <i class="fas fa-envelope"></i>
-    </a>
-
-</div>
-        </div
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/global-all-integrated-development-initiative-gaidi/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/256775602027" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:info@gaidiuganda.org"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
 
     </div>
 
     <div class="footer-bottom">
         <p>© 2026 Global All Integrated Development Initiative (GAIDI). All Rights Reserved.</p>
     </div>
-
 </footer>
+
 <a href="https://wa.me/256775602027" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
-<script src="js/script.js"></script>
+
 <div class="chatbot-container" id="chatbot">
     <div class="chatbot-header">
         <span>GAIDI Assistant</span>
         <button onclick="toggleChatbot()">×</button>
     </div>
 
-    <div class="chatbot-messages" id="chatMessages">
-        <div class="bot-message">
-            Hello 👋 I am GAIDI Assistant. How can I help you today?
-        </div>
-    </div>
+    <div class="chatbot-messages" id="chatMessages"></div>
 
     <div class="chatbot-options">
-        <button onclick="quickReply('What is GAIDI?')">What is GAIDI?</button>
         <button onclick="quickReply('Programs')">Programs</button>
         <button onclick="quickReply('Volunteer')">Volunteer</button>
-        <button onclick="quickReply('Membership')">Membership</button>
-        <button onclick="quickReply('Partnerships')">Partnerships</button>
+        <button onclick="quickReply('Internship')">Internship</button>
+        <button onclick="quickReply('Donate')">Donate</button>
         <button onclick="quickReply('Contact')">Contact</button>
     </div>
 
@@ -264,5 +284,46 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <button class="chatbot-toggle" onclick="toggleChatbot()">
     <i class="fas fa-robot"></i>
 </button>
+
+<script src="js/script.js"></script>
+
+<script>
+const appURL = "https://script.google.com/macros/s/AKfycbxJUEPDI-jKRszZ0P__BLKthGKGatx4methTzlhv4Ya6wbD5rB_Yjzxw-PhQ8osCzPDYQ/exec";
+
+fetch(appURL + "?cachebuster=" + new Date().getTime())
+.then(response => response.json())
+.then(data => {
+    const partners = data.partners || [];
+    const marquee = document.getElementById("partnersMarquee");
+
+    if(partners.length === 0){
+        return;
+    }
+
+    let html = "";
+
+    partners.forEach(function(partner){
+        html += `
+            <div class="partner-card">
+                <img src="${partner.logo || 'images/logo.png'}" alt="${partner.partnerName}">
+                <div>
+                    <h3>${partner.partnerName}</h3>
+                    <p>${partner.description}</p>
+                    <p><strong>${partner.category}</strong> | ${partner.country}</p>
+                    <a href="${partner.website}" target="_blank" rel="noopener noreferrer">
+                        Visit Website <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        `;
+    });
+
+    marquee.innerHTML = html;
+})
+.catch(error => {
+    console.log("Partners loading error:", error);
+});
+</script>
+
 </body>
 </html>
